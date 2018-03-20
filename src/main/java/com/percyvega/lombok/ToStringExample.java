@@ -35,3 +35,10 @@ class Point {
   private int x = 10;
   private int y = 10;
 }
+
+class Line {
+  private int x1 = 10;
+  private int y1 = 10;
+  private int x2 = 20;
+  private int y2 = 20;
+}

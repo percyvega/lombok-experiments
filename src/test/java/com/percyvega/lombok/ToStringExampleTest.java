@@ -10,32 +10,39 @@ class ToStringExampleTest {
   @Test
   void test() {
     final ToStringExample example = new ToStringExample("Percy", 38);
-    final String toString = example.toString();
-    System.out.println(toString);
-    assertThat(toString).isEqualTo("ToStringExample(name=Percy, age=38)");
+    final String s = example.toString();
+    System.out.println(s);
+    assertThat(s).isEqualTo("ToStringExample(name=Percy, age=38)");
   }
 
   @Test
   void testExclude() {
     final Point point = new Point();
-    final String toString = point.toString();
-    System.out.println(toString);
-    assertThat(toString).isEqualTo("Point(x=10)");
+    final String s = point.toString();
+    System.out.println(s);
+    assertThat(s).isEqualTo("Point(x=10)");
   }
 
   @Test
   void testDoNotUseGetters() {
     final Dot dot = new Dot();
-    final String toString = dot.toString();
-    System.out.println(toString);
-    assertThat(toString).isEqualTo("Dot(size=1)");
+    final String s = dot.toString();
+    System.out.println(s);
+    assertThat(s).isEqualTo("Dot(size=1)");
   }
 
   @Test
   void testCD() {
     final ToStringExampleCD example = new ToStringExampleCD("Percy", 38);
-    final String toString = example.toString();
-    System.out.println(toString);
-    assertThat(toString).isEqualTo("ToStringExampleCD(Percy, 38)");
+    final String s = example.toString();
+    System.out.println(s);
+    assertThat(s).isEqualTo("ToStringExampleCD(Percy, 38)");
+  }
+
+  @Test
+  void testNoToString() {
+    final Line line = new Line();
+    final String s = line.toString();
+    System.out.println(s);
   }
 }
